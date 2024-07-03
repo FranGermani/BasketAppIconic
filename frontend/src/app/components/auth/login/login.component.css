@@ -1,0 +1,34 @@
+/* Fondo con degradado */
+.full-screen-bg {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.479), #0077ff);
+}
+
+/* Ajuste de los estilos de la tarjeta */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.input-group-text {
+  background: none;
+  border: none;
+  padding-right: 5px;
+}
+
+.btn-link {
+  padding-left: 0;
+}
