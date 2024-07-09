@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.479), #0077ff);
+  background: linear-gradient(#000,#00ADEF,#0077ff);
 }
 
 /* Ajuste de los estilos de la tarjeta */
@@ -31,4 +31,42 @@ h1 {
 
 .btn-link {
   padding-left: 0;
+  color: #00ADEF; /* Azul del tema principal */
+}
+
+.btn-primary {
+  background-color: #00ADEF;
+  border-color: #00ADEF;
+}
+
+.btn-primary:hover {
+  background-color: #0077ff;
+  border-color: #0077ff;
+}
+
+.btn-light {
+  background-color: #fff;
+  border-color: #0077ff;
+  color: #000;
+}
+
+.btn-light:hover {
+  background-color: #0077ff;
+  border-color: grey;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Estilos específicos para la tarjeta de login */
+.login-card {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Estilos específicos para la tarjeta de registro */
+.signup-card {
+  background-color: #00ADEF;
+  color: white;
 }

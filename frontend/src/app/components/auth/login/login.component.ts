@@ -1,44 +1,48 @@
 import { Component } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../services/authentication/auth-service.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [AuthService] // Asegúrate de agregar el servicio aquí si es necesario
 })
 export class LoginComponent {
   loginForm: FormGroup;
-  users = [
-    { username: 'admin', password: 'admin' }
-  ];
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {
     this.loginForm = this.fb.group({
-      username: [''],
-      password: ['']
+      username: ['', Validators.required],
+      password: ['', Validators.required]
     });
   }
 
   onSubmit() {
     const { username, password } = this.loginForm.value;
-    const user = this.users.find(u => u.username === username && u.password === password);
 
-    if (user) {
-      this.router.navigate(['/index']);
-    } else {
-      alert('Invalid credentials');
-    }
+    // Uso del servicio AuthService para manejar la autenticación
+    this.authService.login(username, password).subscribe(user => {
+      if (user) {
+        if (user.role === 'admin') {
+          this.router.navigate(['/admin-panel']); // Redirige al panel del administrador
+        } else {
+          this.router.navigate(['/client-panel']); // Redirige al panel del cliente
+        }
+      } else {
+        alert('Invalid credentials');
+      }
+    });
   }
 
   navigateToRegister() {
-    this.router.navigate(['/register']);
+    this.router.navigate(['/auth/register']); // Redirige al registro
   }
 
   enterAsGuest() {
-    // Implementa la lógica para ingresar como invitado
     this.router.navigate(['/index']);
   }
 }

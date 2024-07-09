@@ -2,8 +2,13 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
-    loadComponent: () => import('./components/homepage/homepage.component').then(m => m.HomepageComponent),
+    loadChildren: () => import('./components/landingPages/landingPages.routes').then(m => m.LandingPagesRoutes),
     data: {
       title: 'Homepage'
     }
@@ -16,10 +21,17 @@ export const routes: Routes = [
     }
   },
   {
-    path: 'index',
-    loadComponent: () => import('./components/configurador/configurador.component').then(m => m.ConfiguradorComponent),
+    path: 'client-panel',
+    loadChildren: () => import('./components/client/client.rutes').then(m => m.ClientRoutes),
     data: {
-      title: 'Hola Mundo'
+      title: 'Client Panel'
+    }
+  },
+  {
+    path: 'admin-panel',
+    loadChildren: () => import('./components/admin/admin.routes').then(m => m.AdminRoutes),
+    data: {
+      title: 'Admin Panel'
     }
   },
   {

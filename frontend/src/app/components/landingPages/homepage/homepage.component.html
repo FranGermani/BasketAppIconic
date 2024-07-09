@@ -1,0 +1,84 @@
+<header class="main-header">
+    <div class="header-wrapper">
+      <div class="main-logo">
+        <img src="https://i.imgur.com/swfTKQs.png" alt="ICONIC Logo" width="110px">
+      </div>
+      <nav>
+        <ul class="main-menu">
+          <li><a href="#section-2">About</a></li>
+          <li><a href="#section-5">Service</a></li>
+          <li><a href="#section-7">Work</a></li>
+          <li><a href="#section-9">3DPanel</a></li>
+          <li><a href="#main-footer">Contact</a></li>
+          <li><a href="#"><span class="fa fa-shopping-cart"></span></a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a class="btn-login" (click)="navigateToLogin()">Log In</a>
+        <a class="btn-register" (click)="navigateToRegister()">Register</a>
+      </div>
+    </div>
+  </header>
+  <section id="section-1">
+    <div class="content-slider">
+      <input type="radio" id="banner1" class="sec-1-input" name="banner" checked #sec1Input>
+      <input type="radio" id="banner2" class="sec-1-input" name="banner" #sec1Input>
+      <input type="radio" id="banner3" class="sec-1-input" name="banner" #sec1Input>
+      <input type="radio" id="banner4" class="sec-1-input" name="banner" #sec1Input>
+  
+      <div class="slider">
+        <div id="top-banner-1" class="banner">
+          <div class="banner-inner-wrapper">
+            <h2>Creative Template</h2>
+            <h1>Welcome<br>to ICONIC</h1>
+            <div class="line"></div>
+            <div class="learn-more-button"><a href="#section-2">Learn More</a></div>
+          </div>
+        </div>
+        <div id="top-banner-2" class="banner">
+          <div class="banner-inner-wrapper">
+            <h2>What We Do</h2>
+            <h1>Great<br>ICONIC</h1>
+            <div class="line"></div>
+            <div class="learn-more-button"><a href="#section-4">Learn More</a></div>
+          </div>
+        </div>
+        <div id="top-banner-3" class="banner">
+          <div class="banner-inner-wrapper">
+            <h2>Here We Are</h2>
+            <h1>We Are<br>ICONIC</h1>
+            <div class="line"></div>
+            <div class="learn-more-button"><a href="#section-6">Learn More</a></div>
+          </div>
+        </div>
+        <div id="top-banner-4" class="banner">
+          <div class="banner-inner-wrapper">
+            <h2>Our Contacts</h2>
+            <h1>Welcome<br>to ICONIC</h1>
+            <div class="line"></div>
+            <div class="learn-more-button"><a href="#main-footer">Learn More</a></div>
+          </div>
+        </div>
+      </div>
+  
+      <nav>
+        <div class="carousel-control-prev" (click)="prevSlide()">&#10094;</div>
+        <div class="carousel-control-next" (click)="nextSlide()">&#10095;</div>
+      </nav>
+    </div>
+  </section>
+  <footer class="main-footer" id="main-footer">
+    <div class="footer-content">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p><i class="fa fa-phone"></i> +1 234 567 890</p>
+        <p><i class="fa fa-envelope"></i> infoiconic.com</p>
+        <p><i class="fa fa-map-marker"></i> 123 ICONIC Street, City, Country</p>
+      </div>
+      <div class="contact-button">
+        <button onclick="window.location.href='contact.html'">Contáctanos</button>
+      </div>
+    </div>
+    <p>Creado por franG todos los derechos reservados</p>
+  </footer>
+  
