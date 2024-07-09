@@ -4,6 +4,16 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -22,10 +32,26 @@ jobs:
       run: npm install
 
     - name: Build project
-      run: npm run build -- --output-path=docs --base-href=/iconic-enterprises/
+      run: npm run build -- --output-path=docs --base-href=/BasketAppIconic/
 
     - name: Create .nojekyll file
       run: echo "" > docs/.nojekyll
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: build
+        path: docs
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
