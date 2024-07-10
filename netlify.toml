@@ -1,7 +1,7 @@
 [build]
   base = "frontend"
   publish = "frontend/docs"
-  command = "ng build --configuration production --output-path docs"
+  command = "npm run build"
 
 [[redirects]]
   from = "/*"
