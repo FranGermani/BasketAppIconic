@@ -33,8 +33,9 @@
                   <input type="password" class="form-control" formControlName="password" placeholder="Password" autocomplete="current-password">
                 </div>
                 <div class="row">
-                  <div class="col-6">
-                    <button type="submit" class="btn btn-primary px-4">Login</button>
+                  <div class="col-6 d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn btn-light btn-signup d-md-none ml-2" (click)="navigateToRegister()">Sign Up</button>
                   </div>
                 </div>
                 <div class="row mt-2">
@@ -50,14 +51,14 @@
               </form>
             </div>
           </div>
-          <div class="card signup-card py-5 d-md-down-none" style="min-width: 44%;">
+          <div class="card signup-card py-5 d-none d-md-block" style="min-width: 44%;">
             <div class="card-body text-center">
               <div>
                 <h2>Sign up</h2>
                 <p>Version beta</p>
                 <p>Usuario=admin</p>
                 <p>password=admin</p>
-                <button type="button" class="btn btn-light mt-3" (click)="navigateToRegister()">Register Now!</button>
+                <button type="button" class="btn btn-light btn-signup mt-3" (click)="navigateToRegister()">Register Now!</button>
               </div>
             </div>
           </div>

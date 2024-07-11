@@ -1,42 +1,88 @@
 /* Fondo con degradado */
 .full-screen-bg {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.479), #0077ff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#000, #00ADEF, #0077ff);
+}
+
+/* Ajuste de los estilos de la tarjeta */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.input-group-text {
+  background: none;
+  border: none;
+  padding-right: 5px;
+}
+
+.btn-primary {
+  background-color: #00ADEF;
+  border-color: #00ADEF;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0077ff;
+  border-color: #0077ff;
+}
+
+.btn-light.btn-signup {
+  background-color: #00ADEF;
+  border-color: #0077ff;
+  color: #ffffff;
+  width: 100px; /* Ajusta este valor para el ancho deseado */
+}
+
+.btn-light.btn-signup:hover {
+  background-color: #0077ff;
+  border-color: grey;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Estilos específicos para la tarjeta de registro */
+.register-card {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Estilos específicos para la tarjeta de información */
+.signup-info-card {
+  background-color: #00ADEF;
+  color: white;
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+  .signup-info-card {
+    display: none;
   }
-  
-  /* Ajuste de los estilos de la tarjeta */
-  .card {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-body {
-    display: flex;
+
+  .card-group {
     flex-direction: column;
-    align-items: center;
   }
-  
-  h1 {
+
+  .card {
     margin-bottom: 20px;
   }
-  
-  .input-group-text {
-    background: none;
-    border: none;
-    padding-right: 5px;
+
+  .btn-light.d-md-none {
+    margin-left: 10px;
   }
-  
-  .btn-success {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: white;
-  }
-  
-  .btn-success:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-  }
-  
+}

@@ -12,6 +12,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Para evitar el margen blanco */
 }
 
 /* Asegurarse de que la imagen se muestre correctamente */
@@ -160,6 +161,7 @@ a:hover {
   font-size: 0.875em;
   cursor: pointer;
   text-align: center;
+  border-radius: 4px; /* Añadir border-radius para evitar que se pongan cuadrados */
 }
 .main-header .header-wrapper .auth-buttons .btn-login:hover,
 .main-header .header-wrapper .auth-buttons .btn-register:hover {
@@ -325,6 +327,7 @@ a:hover {
   background-color: #00ADEF; /* Color coral del logo */
   border: none;
   cursor: pointer;
+  border-radius: 4px; /* Añadir border-radius para evitar que se pongan cuadrados */
 }
 .main-footer .footer-content .contact-button button:hover {
   background-color: #00ADEF; /* Color azul del logo */
@@ -504,5 +507,61 @@ a:hover {
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper .line {
       margin: 1.7em auto;
+  }
+}
+
+/* Nuevos estilos para el menú desplegable */
+.hamburger-menu {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu .main-menu,
+.mobile-menu .auth-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-menu .main-menu li {
+  padding: 1em 0;
+}
+
+.mobile-menu .auth-buttons a {
+  margin: 1em 0;
+  border-radius: 4px; /* Añadir border-radius para evitar que se pongan cuadrados */
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop-menu,
+  .desktop-auth {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .main-header .header-wrapper {
+    justify-content: space-between;
   }
 }

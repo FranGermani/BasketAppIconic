@@ -32,4 +32,8 @@ export class RegisterComponent {
       alert('Please fill out the form correctly.');
     }
   }
+
+  navigateToLogin() {
+    this.router.navigate(['/auth']); // Navegación al login
+  }
 }

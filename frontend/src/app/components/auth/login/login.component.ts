@@ -33,7 +33,7 @@ export class LoginComponent {
           this.router.navigate(['/client-panel']); // Redirige al panel del cliente
         }
       } else {
-        alert('Invalid credentials');
+        alert('Invalid credentials'); // Mensaje de alerta para credenciales inválidas
       }
     });
   }
