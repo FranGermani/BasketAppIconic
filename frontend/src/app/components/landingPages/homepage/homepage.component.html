@@ -1,41 +1,4 @@
-<header class="main-header">
-  <div class="header-wrapper">
-    <div class="main-logo">
-      <img src="https://i.imgur.com/swfTKQs.png" alt="ICONIC Logo" width="110px">
-    </div>
-    <nav class="desktop-menu">
-      <ul class="main-menu">
-        <li><a href="#section-2">About</a></li>
-        <li><a href="#section-5">Service</a></li>
-        <li><a href="#section-7">Work</a></li>
-        <li><a href="#section-9">3DPanel</a></li>
-        <li><a href="#main-footer">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="auth-buttons desktop-auth">
-      <a class="btn-login" (click)="navigateToLogin()">Log In</a>
-      <a class="btn-register" (click)="navigateToRegister()">Register</a>
-    </div>
-    <button class="hamburger-menu" [class.open]="mobileMenuOpen" (click)="toggleMobileMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-  <nav class="mobile-menu overlay" [class.open]="mobileMenuOpen">
-    <ul class="main-menu">
-      <li><a href="#section-2" (click)="toggleMobileMenu()">About</a></li>
-      <li><a href="#section-5" (click)="toggleMobileMenu()">Service</a></li>
-      <li><a href="#section-7" (click)="toggleMobileMenu()">Work</a></li>
-      <li><a href="#section-9" (click)="toggleMobileMenu()">3DPanel</a></li>
-      <li><a href="#main-footer" (click)="toggleMobileMenu()">Contact</a></li>
-    </ul>
-    <div class="auth-buttons">
-      <a class="btn-login" (click)="navigateToLogin(); toggleMobileMenu()">Log In</a>
-      <a class="btn-register" (click)="navigateToRegister(); toggleMobileMenu()">Register</a>
-    </div>
-  </nav>
-</header>
+<app-header></app-header>
 <section id="section-1">
   <div class="content-slider">
     <input type="radio" id="banner1" class="sec-1-input" name="banner" checked #sec1Input>

@@ -15,13 +15,6 @@ html, body {
   overflow-x: hidden; /* Para evitar el margen blanco */
 }
 
-/* Asegurarse de que la imagen se muestre correctamente */
-.main-logo img {
-  display: block;
-  max-width: 100%; /* Asegúrate de que la imagen no exceda el contenedor */
-  height: auto; /* Mantén la proporción de la imagen */
-}
-
 body {
   margin: 0 auto;
   padding: 0;
@@ -101,73 +94,6 @@ a:hover {
   height: 0.1875em;
   margin: 0 auto;
   background: #00ADEF; /* Color coral del logo */
-}
-
-/* Main Header Styles */
-.main-header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-  background: transparent;
-}
-.main-header .header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  padding-top: 1em;
-}
-.main-header .header-wrapper .main-logo {
-  flex-shrink: 0;
-}
-.main-header .header-wrapper .main-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-.main-header .header-wrapper .main-menu li {
-  display: inline-block;
-  padding: 0.75em 1.875em;
-}
-.main-header .header-wrapper .main-menu li a {
-  padding-bottom: 0.75em;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 0.875em;
-}
-.main-header .header-wrapper .main-menu li a:hover {
-  color: #00ADEF; /* Color coral del logo */
-  border-bottom: 0.1875em solid #00ADEF;
-  transition: 0.1s;
-}
-.main-header .header-wrapper .auth-buttons {
-  display: flex;
-  align-items: center;
-}
-.main-header .header-wrapper .auth-buttons .btn-login,
-.main-header .header-wrapper .auth-buttons .btn-register {
-  color: #fff;
-  background: #00ADEF; /* Color azul del logo */
-  border: none;
-  padding: 0.5em 1em;
-  margin-left: 1em;
-  text-transform: uppercase;
-  font-family: Montserrat, sans-serif;
-  font-size: 0.875em;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 4px; /* Añadir border-radius para evitar que se pongan cuadrados */
-}
-.main-header .header-wrapper .auth-buttons .btn-login:hover,
-.main-header .header-wrapper .auth-buttons .btn-register:hover {
-  color: #e88382;
-  background: #fff;
-  transition: 0.3s;
 }
 
 /* Section-1 Styles */
@@ -287,327 +213,121 @@ a:hover {
   z-index: 1;
 }
 
-/* Footer Styles */
-.main-footer {
-  background-color: #1a1a1a; /* Fondo negro para el pie de página */
-  color: #fff;
-  text-align: center;
-  padding: 2em 0;
-  position: relative;
-  width: 100%;
-}
-.main-footer .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.main-footer .footer-content .contact-info {
-  margin-bottom: 1em;
-}
-.main-footer .footer-content .contact-info h3 {
-  font-family: Montserrat, sans-serif;
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-  color: #00ADEF; /* Color azul del logo */
-}
-.main-footer .footer-content .contact-info p {
-  margin: 0.2em 0;
-  font-family: Roboto, sans-serif;
-  font-size: 1em;
-}
-.main-footer .footer-content .contact-button {
-  margin-bottom: 1em;
-}
-.main-footer .footer-content .contact-button button {
-  padding: 0.5em 2em;
-  font-family: Montserrat, sans-serif;
-  font-size: 1em;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #00ADEF; /* Color coral del logo */
-  border: none;
-  cursor: pointer;
-  border-radius: 4px; /* Añadir border-radius para evitar que se pongan cuadrados */
-}
-.main-footer .footer-content .contact-button button:hover {
-  background-color: #00ADEF; /* Color azul del logo */
-}
-.main-footer p {
-  margin: 0;
-  font-family: Montserrat, sans-serif;
-  font-size: 1em;
-}
-
 /* Media Queries */
 @media only screen and (min-width: 1920px) {
   body {
-      font-size: 22px;
-  }
-  .main-header .header-wrapper {
-      width: 57%;
+    font-size: 22px;
   }
   #section-1 {
-      height: 46em;
+    height: 46em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper {
-      padding-top: 12em;
+    padding-top: 12em;
   }
 }
 
 @media only screen and (max-width: 1919px) {
   body {
-      font-size: 20px;
-  }
-  .main-header .header-wrapper {
-      width: 60%;
+    font-size: 20px;
   }
   #section-1 {
-      height: 43em;
+    height: 43em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper {
-      padding-top: 11em;
+    padding-top: 11em;
   }
 }
 
 @media only screen and (max-width: 1680px) {
   body {
-      font-size: 18px;
-  }
-  .main-header .header-wrapper {
-      width: 65%;
+    font-size: 18px;
   }
   #section-1 {
-      height: 40em;
+    height: 40em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper {
-      padding-top: 9em;
+    padding-top: 9em;
   }
 }
 
 @media only screen and (max-width: 1366px) {
   body {
-      font-size: 16px;
-  }
-  .main-header .header-wrapper {
-      width: 70%;
+    font-size: 16px;
   }
 }
 
 @media only screen and (max-width: 1120px) {
-  .main-header .header-wrapper .main-menu li {
-      padding: 0.75em 1.4em;
-  }
   #section-1 {
-      height: 35em;
+    height: 35em;
   }
   #section-1 .content-slider nav {
-      bottom: -0.2em;
+    bottom: -0.2em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper {
-      padding-top: 7em;
+    padding-top: 7em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper .line {
-      margin: 2em auto;
+    margin: 2em auto;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   body {
-      font-size: 14px;
-  }
-  .main-header .header-wrapper .main-menu li {
-      padding: 0.75em 1.3em;
+    font-size: 14px;
   }
   #section-1 .content-slider nav {
-      bottom: 0;
+    bottom: 0;
   }
   #section-1 .content-slider nav .controls {
-      width: 80%;
+    width: 80%;
   }
 }
 
 @media only screen and (max-width: 860px) {
-  .main-header .header-wrapper .main-menu li {
-      padding: 0.75em 0.9em;
-  }
   #section-1 {
-      height: 29em;
+    height: 29em;
   }
   #section-1 .content-slider nav {
-      bottom: -1em;
+    bottom: -1em;
   }
   #section-1 .content-slider nav .controls {
-      width: 90%;
+    width: 90%;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper h2 {
-      font-size: 2em;
+    font-size: 2em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper h1 {
-      font-size: 4.5em;
+    font-size: 4.5em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper {
-      padding-top: 5em;
+    padding-top: 5em;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .main-header .header-wrapper .main-menu li {
-      padding: 0.75em 0.5em;
-  }
   #section-1 {
-      height: 27em;
+    height: 27em;
   }
   #section-1 .content-slider nav .controls {
-      width: 100%;
+    width: 100%;
   }
   #section-1 .content-slider nav .controls label {
-      width: 19%;
-      font-size: 0.8em;
+    width: 19%;
+    font-size: 0.8em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper .line {
-      margin: 1.7em auto;
+    margin: 1.7em auto;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  .main-header .header-wrapper {
-      width: 95%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .main-header .header-wrapper {
-      width: 97%;
-  }
-  .main-header .header-wrapper .main-logo {
-      display: none;
-  }
-  .main-header .header-wrapper .main-menu li {
-      padding: 0.2em 0.3em;
-  }
-  .main-header .header-wrapper .main-menu li:last-child,
-  .main-header .header-wrapper .main-menu li:nth-child(6) {
-      padding: 0.2em 0.7em;
-  }
-  #section-1 {
-      height: 26em;
-  }
-  #section-1 .content-slider nav {
-      bottom: -0.5em;
-  }
-  #section-1 .content-slider nav .controls label {
-      width: 40%;
-      font-size: 0.7em;
-  }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper h2 {
-      font-size: 1.5em;
+    font-size: 1.5em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper h1 {
-      font-size: 3em;
+    font-size: 3em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper .line {
-      margin: 1.7em auto;
-  }
-}
-
-/* Nuevos estilos para el menú desplegable */
-.hamburger-menu {
-  display: none;
-  position: relative;
-  width: 30px;
-  height: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-.hamburger-menu span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: #fff;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-.hamburger-menu span:nth-child(1) {
-  top: 0;
-}
-
-.hamburger-menu span:nth-child(2) {
-  top: 10px;
-}
-
-.hamburger-menu span:nth-child(3) {
-  top: 20px;
-}
-
-.hamburger-menu.open span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 10px;
-}
-
-.hamburger-menu.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-menu.open span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 10px;
-}
-
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.95); /* Fondo semi-transparente */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1001;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-.mobile-menu.open {
-  display: flex;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.mobile-menu .main-menu,
-.mobile-menu .auth-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mobile-menu .main-menu li {
-  padding: 1em 0;
-}
-
-.mobile-menu .auth-buttons a {
-  margin: 1em 0;
-  border-radius: 4px; /* Añadir border-radius para evitar que se pongan cuadrados */
-}
-
-@media only screen and (max-width: 768px) {
-  .desktop-menu,
-  .desktop-auth {
-    display: none;
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-
-  .main-header .header-wrapper {
-    justify-content: space-between;
+    margin: 1.7em auto;
   }
 }

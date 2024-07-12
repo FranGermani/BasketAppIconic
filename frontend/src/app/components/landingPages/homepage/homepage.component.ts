@@ -2,11 +2,12 @@ import { Component, OnInit, Renderer2, ViewChildren, QueryList, AfterViewInit, E
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CommonModule, FooterComponent], // Importar el componente Footer
+  imports: [CommonModule, FooterComponent, HeaderComponent], // Importar el componente Footer y Header
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
@@ -14,7 +15,6 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   @ViewChildren('sec1Input') sec1Inputs!: QueryList<ElementRef>;
   @ViewChildren('controlLabel') controlLabels!: QueryList<ElementRef>;
   bannerTimer: any;
-  mobileMenuOpen = false;  // Nueva propiedad
 
   constructor(private renderer: Renderer2, private router: Router) {}
 
@@ -73,9 +73,5 @@ export class HomepageComponent implements OnInit, AfterViewInit {
 
   navigateToRegister(): void {
     this.router.navigate(['/auth/register']);
-  }
-
-  toggleMobileMenu(): void {
-    this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 }
